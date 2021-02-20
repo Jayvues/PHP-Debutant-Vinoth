@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PHP Apprendre</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jq_slide.css" rel="stylesheet">
+    <link rel="javascript" href="js/backtop.js">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="images/php.png" width="50" height="30" class="d-inline-block align-top" alt=""> PHP Apprendre
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Course List
+          </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#prei">Mon premier script</a>
+                        <a class="dropdown-item" href="#comm">Les commentaires</a>
+                        <a class="dropdown-item" href="#vari">Variable</a>
+                        <a class="dropdown-item" href="#fonc">Fonction</a>
+                        <a class="dropdown-item" href="#arra">Array / Tableau</a>
+                        <a class="dropdown-item" href="#loop">Loop / boucle</a>
+                        <a class="dropdown-item" href="#cond">Conditions</a>
+                        <a class="dropdown-item" href="#get">GET et POST</a>
+                        <a class="dropdown-item" href="#cook">Cookies</a>
+                        <a class="dropdown-item" href="#sess">Sessions</a>
+                        <a class="dropdown-item" href="#vers">Variables serveur</a>
+                        <a class="dropdown-item" href="#date">Dates</a>
+                    </div>
+                </li>
+            </ul>
+            <span>By Vinoth Kumar TIROUVENGADAME</span>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row align-items-center my-5">
+            <div class="col-lg-3">
+                <img class="img-fluid rounded mb-4 mb-lg-0" src="images/php.png" alt="PHP Logo">
+            </div>
+            <div class="col-lg-9">
+                <h1>PHP c'est quoi? <br>Apprendre PHP pour les débutants</h1>
+                <p>A sa conception PHP est l'acronyme de "Personal Home Pages" puis est devenu PHP Hypertext PreProcessor. PHP a été crée en 1994 par le danois Rasmus Lerdorf qui cherchait alors à tracer les internautes qui visitaient son CV grâce à une
+                    base de données. De nombreux internautes lui demandèrent son programme, alors il décida de rendre disponible sa première version de PHP : PHP 1.0</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <h2>Histoire de PHP</h2>
+                            A sa conception PHP est l'acronyme de "Personal Home Pages" puis est devenu PHP Hypertext PreProcessor. PHP a été crée en 1994 par le danois Rasmus Lerdorf qui cherchait alors à tracer les internautes qui visitaient son CV grâce à une base de données.
+                            De nombreux internautes lui demandèrent son programme, alors il décida de rendre disponible sa première version de PHP : PHP 1.0
+                            <br>
+                            <br>
+                            <h2>Présentation de PHP</h2>
+                            PHP est un langage de programmation compilé à la volée, c'est à dire qu'il peut être compilé juste avant son exécution. Il est surtout utilisé pour gérer du contenu dynamique pour les pages web mais il peut très bien exécuter des scripts en local comme
+                            n'importe quel langage interprété. PHP peut également créer d'autres formats en rapport avec le web comme des images, des pdf ou des xml.
+                            <br />
+                            <br>
+                            <h2>La force de PHP</h2>
+                            PHP est libre, c'est-à-dire que son utilisation est ouverte à tous et gratuite ( licence GNU GPL ). Comme de nombreux projets open source populaires, une grande communauté autour de PHP communique et toutes ses fonctionnalités et astuces sont facilement
+                            identifiables /expliqués sur internet. PHP est un langage simple à comprendre et très souple ; parfait pour les débutants. On peut d'ailleurs intégrer des lignes de code PHP directement dans le code
+                            <a class="link" title="HTML" href="/page-apprendre-html"><strong>HTML</strong></a>, ce qui permet de créer des contenus dynamiques très facilement.
+                            <br>
+                            <br>
+                            <h2>Serveur</h2>
+                            PHP est la plupart du temps installé sur un serveur <strong>Apache</strong>, mais il peut tout aussi bien fonctionner sur un IIS. Il est souvent associé à <b>L</b>inux <b>A</b>pache <b>M</b>ySQL <b>P</b>hp, d'où le terme de
+                            <strong>LAMP</strong>.</p>
+                    </div>
+                    <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+                </div>
+            </div> <br>
+        </div> <br><br><br>
+        <div class="row" id="home">
+            <div class="col5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2>Mon premier script</h2><br>
+                        <p class="card-text">
+                            Tout d'abord, installez <a class="link" title="PHP" href="/page-apprendre-php"><strong>PHP</strong></a> ( ou <a class="link" title="WampServer" href="/page-initiation-installer-serveur-web"><strong>WampServer</strong></a> ).
+                            Vous pouvez vous assurer que votre serveur est capable de lire en créant un fichier à l'extension .php
+                            <br /> Pour indiquer au fichier qu'il s'agit d'un script PHP, il faut encadrer le code PHP avec les balises
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;?php </td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:20px;">// Votre code</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">?&gt;</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p>Example:</p>
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;?php </td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:20px;">echo "Votre texte";</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">?&gt;</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Résultat:
+                            <div class="resultat">
+                                Votre texte
+                            </div>
+                            <h2>A quoi sert un script?</h2>
+                            <p> Ecrire un script - programmer - permet de réaliser un rendu complexe en quelques lignes de code alors qu'il faudrait des heures de travail en statique.
+                            </p> <br /><br /> Exemple d'utilité d'écrire un script:
+                            <br /> Je veux afficher sur ma page 15 inputs:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">value</span>="<span class="attribute_value">1</span>" /&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">value</span>="<span class="attribute_value">2</span>" /&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">value</span>="<span class="attribute_value">3</span>" /&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">value</span>="<span class="attribute_value">4</span>" /&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">value</span>="<span class="attribute_value">5</span>" /&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">value</span>="<span class="attribute_value">6</span>" /&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">value</span>="<span class="attribute_value">7</span>" /&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">value</span>="<span class="attribute_value">8</span>" /&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">value</span>="<span class="attribute_value">9</span>" /&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">value</span>="<span class="attribute_value">10</span>" /&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">value</span>="<span class="attribute_value">11</span>" /&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">value</span>="<span class="attribute_value">12</span>" /&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">value</span>="<span class="attribute_value">13</span>" /&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">value</span>="<span class="attribute_value">14</span>" /&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">value</span>="<span class="attribute_value">15</span>" /&gt;</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            La méthode statique serait de copier coller la ligne de code <a class="link" title="HTML" href="/page-apprendre-html"><strong>HTML</strong></a> autant de fois qu'on a besoin d'input. La méthode dynamique serait de créer un
+                            script qui indique le nombre d'input que l'on désire afficher.
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">for</span>( <span class="variable">$i</span> = 1 ; <span class="variable">$i</span> &lt;= 15 ; <span class="variable">$i</span>++ ){</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:40px;"><span class="function">echo</span> '&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">value</span>="'. <span class="variable">$i</span>                                            .'" /&gt;';</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;">}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            On remarque que même si le code semble plus complexe, on utilise moins de lignes de code. Imaginez maintenant qu'on devait afficher 1000 lignes, le script ne changerait que la valeur 15 en 1000 alors que la méthode statique obligerait à modifier 1000
+                            lignes de code HTML.
+
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br><br><br>
+        <div class="row" id="prei">
+            <div class="col5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2>Mon premier script</h2><br>
+                        <p class="card-text">
+                            Il est très important de commenter son travail, que ce soit en <a class="link" title="HTML" href="/page-apprendre-html"><strong>HTML</strong></a>, en <a class="link" title="CSS" href="/page-apprendre-css"><strong>CSS</strong></a>                            ou en <a class="link" title="PHP" href="/page-apprendre-php"><strong>PHP</strong></a>. Les commentaires sont des indications qui résument des fonctionnalités, cela permet de comprendre un code plus rapidement.
+                            <br /><br /> Il exite 3 manières de commenter un texte en PHP.
+                            <br />
+                            <div class="code">// Commentaire ici</div>
+                            <div class="code"># Commentaire ici</div>
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">/*</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">Commentaire ici</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">*/</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Parfois un commentaire semble inutile sur une fonction qui s'appelle "<strong>build_menu</strong>", mais il n'y a jamais trop de commentaires, vous devez comprendre ce que fait un script exactement juste en lisant les commentaires.
+
+                    </div>
+                </div>
+            </div> <br> <br><br><br>
+        </div> <br><br><br>
+        <div class="row" id="comm">
+            <div class="col5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2>Les commentaires</h2><br>
+                        <p class="card-text">
+                            En programmation une variable est une sorte de boîte dans laquelle on met à peu près ce que l'on veut. Une variable est composée du symbole dollar ( $ ) suivi d'un nom. Le nom de la variable doit commencer par une lettre puis peut être suivi par d'autres
+                            lettres ou chiffres ou des caractères spéciaux comme l'underscore (tiret-bas) et le tiret. Les espaces sont interdits. Pour écrire le nom d'une variable ayant besoin d'un espace pour sa compréhension, préféré donc la syntaxe
+                            $customer_name; Il est préférable de ne pas mettre d'accents pour le nom d'une variable, il est d'ailleurs plus intéressant de nommer toutes les variables en anglais. Cette langue a l'avantage d'être la langue de l'informatique,
+                            mais permet d'exprimer une idée en un mot et un mot sans accent et rendra votre code international.
+                            <br /><br />
+                            <h2>Attribuer une valeur à une variable</h2>
+                            La valeur d'une variable se définit comme ceci:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="variable">$name</span> = 'olivier';</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Ma variable <strong>$name</strong> a pour valeur "olivier".
+                            <h2>Ecrasement de valeur</h2>
+                            Je peux écraser la valeur quand je veux.
+                            <br /><br /> Exemple:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="variable">$name</span> = 'olivier';</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="variable">$name</span> = 'jean';</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Ma variable <strong>$name</strong> a pour valeur "jean".
+                            <h2>Concaténation</h2>
+                            Je peux ajouter du texte à une valeur déjà existante, on parle de concaténation. Pour cela j'ajoute un point entre les deux items.
+                            <br /><br /> Exemple:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="variable">$name</span> = 'olivier';</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="variable">$name</span> = <span class="variable">$name</span> . ' engel '; </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Ma variable <strong>$name</strong> a désormais la valeur "olivier engel"
+                            <br> <br /> On peut écrire le code également sous cette forme pour concaténer des données:
+
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="variable">$name</span> = 'olivier';</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="variable">$name</span>.= ' engel '; </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            En <a class="link" title="PHP" href="/page-apprendre-php"><strong>PHP</strong></a>, les variables ne sont pas typées. C'est-à-dire qu'une variable peut accepter n'importe quel type de valeur à sa déclaration. On peut donc en
+                            théorie additionner des chaînes de caractères avec des chiffres numériques, ce qui n'a pas vraiment de sens.
+                            <h2>Opérateurs mathématique</h2>
+                            On peut additionner, soustraire, multiplier ou diviser deux valeurs:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="variable">$value1</span> = 500;</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="variable">$value2</span> = 100; </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:60px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="variable">$value3</span> = <span class="variable">$value1</span> + <span class="variable">$value2</span>; </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="variable">$value4</span> = <span class="variable">$value1</span> - <span class="variable">$value2</span>; </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="variable">$value5</span> = <span class="variable">$value1</span> * <span class="variable">$value2</span>; </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="variable">$value6</span> = <span class="variable">$value1</span> / <span class="variable">$value2</span>;</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br><br><br>
+        <div class="row" id="vari">
+            <div class="col5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2>Variable</h2><br>
+                        <p class="card-text">
+                            Une fonction est un processus qui transforme un item.
+                            <img class="img_center img-responsive" src="/images/function.png" /> Dans cet exemple, qui est une image pour comprendre le fonctionnement d'une fonction, l'orange est une <strong>variable</strong>, le mixeur une <strong>fonction</strong>                            et le jus d'orange <strong>le résultat de la fonction</strong>.
+                            <br /><br /> On remarque que dans notre exemple on a choisi une orange, mais on aurait pu prendre un autre fruit. Le mixeur quant à lui ne change pas, il mixe sans se poser de question. Son rôle est de mixer et on aura toujours
+                            du jus, à condition de lui donner un item adapté ( un fruit ou un légume ). Donner un mauvais item à une fonction provoquera les mêmes dégâts que mettre un objet non adapté dans ce mixeur.
+                            <br /><br /> On n'est pas obligé de comprendre comment fonctionne un mixeur pour s'en servir. Savoir appuyer sur le bouton "On" est le seul besoin. En programmation c'est à peu près la meme logique, on peut appeler une fonction
+                            pour transformer notre variable, on ne comprend pas le mécanisme de la fonction, mais on sait qu'elle nous la transformera en ce que nous désirons.
+                            <br /><br /> Pour récupérer la valeur de transformation d'une valeur la syntaxe est la suivante:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="variable">$resultat</span> = <span class="function_name">ma_fonction</span>( <span class="variable">$value1</span> );</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Et si je veux écrire une fonction :
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">function <span class="function_name">ma_fonction</span>( <span class="variable">$value</span> ){</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">return</span> <span class="variable">$value</span> + 1;</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            PHP permet d'appeler une fonction qui n'est pas encore déclarée. Dans mon exemple j'appelle la fonction "ma_fonction" alors que je la déclare après. J'aurais pu appeler ma fonction avant ou après sa création.
+                            <br /><br /> La fonction que j'ai crée ajoute "<strong>+1</strong>" à la valeur qu'on lui envoie.
+                            <br /><br />
+                            <h2>La fonction indépendante</h2>
+                            Une fonction peut être aussi appelée sans paramètre.
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">destroy_the_world</span>();</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Si la fonction est bien codée, je suis censé détruire le monde comme indiqué, sans savoir de quoi est composé cette fonction.
+                            <br /><br /> Si la fonction le permet je peux rendre le passage d'argument optionnel. Ainsi si je veux détruire qu'une région du monde je lui précise laquelle en lui passant un paramètre.
+                            <br /><br /> Exemple:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">destroy_the_world</span>( "Atlantide" );</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Dans le cas d'un paramètre non obligatoire la syntaxe est la suivante:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">function <span class="function_name">destroy_the_world</span>( <span class="variable">$lieu</span> = "Tout" ){</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="code_commentaire">// Code confidentiel</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;">...</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Si le lieu n'est pas reseigné, c'est comme si on lui avait passer la variable "Tout".
+                            <h2>Plusieurs syntaxes</h2>
+                            Pour les fonctions natives comme <strong>echo</strong> ou <strong>include</strong>, la syntaxe est différente:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">echo "test";</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">include "/folder/fichier.txt";</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br><br><br>
+        <div class="row" id="fonc">
+            <div class="col5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2>Fonction</h2><br>
+                        <p class="card-text">
+                            En <a class="link" title="PHP" href="/page-apprendre-php"><strong>PHP</strong></a> un tableau permet de réunir plusieurs valeurs dans une seule variable. Prenons l'exemple d'une liste, je voudrais la liste de tous les employés
+                            d'une entreprise. Pour cela je l'indique comme ceci:
+                            <div class="code"><span class="variable">$employes</span> = <span class="function_name">array</span>( "olivier engel", "Batman", "Harry Potter", "Hulk" );</div>
+                            Cette ligne de code garde en mémoire le tableau suivant:
+                            <table class="table table-condensed table-bordered table-list" style="max-width:300px;margin:10px auto;">
+
+                                <tr>
+                                    <th>0</th>
+                                    <td>Olivier ENGEL</td>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <td>Batman</td>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <td>Harry Potter</td>
+                                </tr>
+                                <tr>
+                                    <th>3</th>
+                                    <td>Hulk</td>
+                                </tr>
+                            </table>
+                            PHP associe donc une valeur à un index. L'index 1 du tableau à pour valeur <strong>Batman</strong> ; et le premier index d'un tableau est 0.
+                            <br>
+                            <br>
+                            <h3>Les index</h3><br> Les index sont les clés des tableaux. Si je veux le troisième employé de la liste, je dois ecrire <strong>$employes[2]</strong>, qui est
+                            <strong>Harry Potter</strong>. Je peux voir toutes les valeurs d'un tableau grâce à la fonction <strong>var_dump</strong>
+                            <div class="code"><span class="function_name">var_dump</span>( <span class="variable">$employes</span> );</div>
+                            Je peux définir moi même les index, au lieu de prendre une suite numérique, je peux lui donner la valeur que je veux si j'utilise des valeurs alphanumériques.
+                            <br /><br /> Exemple:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="variable">$employes</span> = <span class="function_name">array</span>(</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">"the_best" =&gt; "olivier engel",</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">"the_dark" =&gt; "Batman", </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">"the_child" =&gt; "Harry Potter",</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">"the_big" =&gt; "Hulk" </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">);</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Pour trouver la valeur <strong>Batman</strong>, je devrai donc appeler la variable.
+                            <div class="code"><span class="variable">$employes</span>["the_dark"];</div>
+                            <br>
+                            <h3>Manipuler un tableau</h3>
+                            Si je veux manipuler un tableau dont je ne connais pas les index je peux l'explorer grâce à la fonction <strong>foreach</strong>
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">foreach</span>( <span class="variable">$employes</span> as <span class="variable">$key</span> =&gt; <span class="variable">$value</span> ){</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:60px;">echo "Cl&eacute;: " . <span class="variable">$key</span> . " Sa valeur " . <span class="variable">$value</span> . "&lt;<span class="balise">br</span> /&gt;"; </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Pour information la fonction <strong>echo</strong> permet d'écrire les valeurs qu'on lui indique. Dans l'exemple ci-dessus il s'agit de HTML.
+                            <h2>Supprimer un index d'un tableau</h2>
+                            Pour supprimer un index il faut appeler la fonction <strong>unset</strong> :
+                            <div class="code"><span class="function_name">unset</span>( <span class="variable">$employes</span>["the_best"] );</div>
+                            <br>
+                            <h3>Ajouter un index à un tableau</h3>
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="variable">$employes</span>[] = "Spiderman";</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="code_commentaire">// ou avec un index personnalis&eacute;</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="variable">$employes</span>["the_spider"] = "Spiderman";</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <br>
+                            <h3>Les fonction PHP pour manipuler les array</h3>
+                            Lorsque vous travaillez sur des scripts un peu complexe, vous utilisez forcément des tableaux. PHP vous simplifie la vie en vous proposant des fonctions qui vous permettent de trier, d'inverser les données, etc. :
+                            <div class="code"><span class="variable">$a</span> = <span class="function_name">array</span>( 0 =&gt; "blue", 5 =&gt; "abricot", 2 =&gt; "orange", 3 =&gt; "green" );</div>
+                            <h2>Compter le nombre d'entrées d'un array</h2>
+                            <div class="code">echo <span class="function_name">count</span>(<span class="variable">$a</span>);</div>
+                            <pre dir="ltr"><small>int</small> <font color="#4e9a06">4</font></pre>
+                            <br>
+                            <h3>Trier les valeurs d'un array</h3>
+
+                            La fonction <strong>sort</strong> permet de trier les tableaux PHP mais on perd l'association des clés / valeurs
+
+                            <div class="code"><span class="function_name">sort</span>( <span class="variable">$a</span> ); </div>
+                            <pre class="" dir="ltr"><b>array</b> <i>(size=3)</i>
+                            0 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'abricot'</font> <i>(length=4)</i>
+                            1 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'blue'</font> <i>(length=4)</i>
+                            2 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'green'</font> <i>(length=5)</i>
+                            3 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'orange'</font> <i>(length=6)</i>
+                            </pre> <br>
+                            <h3>Trier les valeurs d'un array sans perdre l'association des clés</h3>
+
+                            La fonction <strong>asort</strong> permet de trier les tableaux PHP sans perdre l'association des clés / valeurs
+                            <div class="code"><span class="function_name">asort</span>( <span class="variable">$a</span> ); </div>
+                            <pre class="" dir="ltr"><b>array</b> <i>(size=4)</i>
+                            5 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'abricot'</font> <i>(length=7)</i>
+                            0 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'blue'</font> <i>(length=4)</i>
+                            3 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'green'</font> <i>(length=5)</i>
+                            2 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'orange'</font> <i>(length=6)</i>
+                            </pre>
+                            <br>
+                            <h3>Trier les clés d'un array</h3>
+                            La fonction <strong>ksort</strong> permet de trier les clés tout en gardant l'association avec les valeurs
+                            <div class="code"><span class="function_name">ksort</span>( <span class="variable">$a</span> ); </div>
+                            <pre class="" dir="ltr"><b>array</b> <i>(size=4)</i>
+                            0 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'blue'</font> <i>(length=4)</i>
+                            2 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'orange'</font> <i>(length=6)</i>
+                            3 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'green'</font> <i>(length=5)</i>
+                            5 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'abricot'</font> <i>(length=7)</i>
+                            </pre> <br>
+                            <h3>Tri descendant</h3>
+                            Tous les tris que nous avons étudié plus haut sont des tris ascendants. Pour avoir des tris descendants, utilisez simplement la fonction "<strong>array_reverse</strong>" qui inverse les données.
+
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">sort</span>( <span class="variable">$a</span> );</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="variable">$a</span> = <span class="function_name">array_reverse</span>(<span class="variable">$a</span>);</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <pre class="" dir="ltr"><b>array</b> <i>(size=4)</i>
+                            0 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'orange'</font> <i>(length=6)</i>
+                            1 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'green'</font> <i>(length=5)</i>
+                            2 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'blue'</font> <i>(length=4)</i>
+                            3 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'abricot'</font> <i>(length=7)</i>
+                        </pre>
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br><br><br>
+        <div class="row" id="arra">
+            <div class="col5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2>Array / Tableau</h2><br>
+                        <p class="card-text">
+                            En <a class="link" title="PHP" href="/page-apprendre-php"><strong>PHP</strong></a> un tableau permet de réunir plusieurs valeurs dans une seule variable. Prenons l'exemple d'une liste, je voudrais la liste de tous les employés
+                            d'une entreprise. Pour cela je l'indique comme ceci:
+                            <div class="code"><span class="variable">$employes</span> = <span class="function_name">array</span>( "olivier engel", "Batman", "Harry Potter", "Hulk" );</div>
+                            Cette ligne de code garde en mémoire le tableau suivant:
+                            <table class="table table-condensed table-bordered table-list" style="max-width:300px;margin:10px auto;">
+
+                                <tr>
+                                    <th>0</th>
+                                    <td>Olivier ENGEL</td>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <td>Batman</td>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <td>Harry Potter</td>
+                                </tr>
+                                <tr>
+                                    <th>3</th>
+                                    <td>Hulk</td>
+                                </tr>
+                            </table>
+                            PHP associe donc une valeur à un index. L'index 1 du tableau à pour valeur <strong>Batman</strong> ; et le premier index d'un tableau est 0.
+                            <h3>Les index</h3><br> Les index sont les clés des tableaux. Si je veux le troisième employé de la liste, je dois ecrire <strong>$employes[2]</strong>, qui est
+                            <strong>Harry Potter</strong>. Je peux voir toutes les valeurs d'un tableau grâce à la fonction <strong>var_dump</strong>
+                            <div class="code"><span class="function_name">var_dump</span>( <span class="variable">$employes</span> );</div>
+                            Je peux définir moi même les index, au lieu de prendre une suite numérique, je peux lui donner la valeur que je veux si j'utilise des valeurs alphanumériques.
+                            <br /><br /> Exemple:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="variable">$employes</span> = <span class="function_name">array</span>(</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">"the_best" =&gt; "olivier engel",</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">"the_dark" =&gt; "Batman", </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">"the_child" =&gt; "Harry Potter",</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">"the_big" =&gt; "Hulk" </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">);</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Pour trouver la valeur <strong>Batman</strong>, je devrai donc appeler la variable.
+                            <div class="code"><span class="variable">$employes</span>["the_dark"];</div>
+                            <h3>Manipuler un tableau</h3><br> Si je veux manipuler un tableau dont je ne connais pas les index je peux l'explorer grâce à la fonction <strong>foreach</strong>
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">foreach</span>( <span class="variable">$employes</span> as <span class="variable">$key</span> =&gt; <span class="variable">$value</span> ){</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:60px;">echo "Cl&eacute;: " . <span class="variable">$key</span> . " Sa valeur " . <span class="variable">$value</span> . "&lt;<span class="balise">br</span> /&gt;"; </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Pour information la fonction <strong>echo</strong> permet d'écrire les valeurs qu'on lui indique. Dans l'exemple ci-dessus il s'agit de HTML.
+                            <h3>Supprimer un index d'un tableau</h3><br> Pour supprimer un index il faut appeler la fonction <strong>unset</strong> :
+                            <div class="code"><span class="function_name">unset</span>( <span class="variable">$employes</span>["the_best"] );</div>
+                            <h3>Ajouter un index à un tableau</h3><br>
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="variable">$employes</span>[] = "Spiderman";</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="code_commentaire">// ou avec un index personnalis&eacute;</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="variable">$employes</span>["the_spider"] = "Spiderman";</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <h3>Les fonction PHP pour manipuler les array</h3><br> Lorsque vous travaillez sur des scripts un peu complexe, vous utilisez forcément des tableaux. PHP vous simplifie la vie en vous proposant des fonctions qui vous permettent
+                            de trier, d'inverser les données, etc. :
+                            <div class="code"><span class="variable">$a</span> = <span class="function_name">array</span>( 0 =&gt; "blue", 5 =&gt; "abricot", 2 =&gt; "orange", 3 =&gt; "green" );</div>
+
+                            <h2>Compter le nombre d'entrées d'un array</h2>
+                            <div class="code">echo <span class="function_name">count</span>(<span class="variable">$a</span>);</div>
+                            <pre dir="ltr"><small>int</small> <font color="#4e9a06">4</font></pre>
+
+                            <h3>Trier les valeurs d'un array</h3><br> La fonction <strong>sort</strong> permet de trier les tableaux PHP mais on perd l'association des clés / valeurs
+
+                            <div class="code"><span class="function_name">sort</span>( <span class="variable">$a</span> ); </div>
+                            <pre class="" dir="ltr"><b>array</b> <i>(size=3)</i>
+                       0 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'abricot'</font> <i>(length=4)</i>
+                       1 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'blue'</font> <i>(length=4)</i>
+                       2 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'green'</font> <i>(length=5)</i>
+                       3 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'orange'</font> <i>(length=6)</i>
+                     </pre>
+
+                            <h3>Trier les valeurs d'un array sans perdre l'association des clés</h3>
+                            <br> La fonction <strong>asort</strong> permet de trier les tableaux PHP sans perdre l'association des clés / valeurs
+                            <div class="code"><span class="function_name">asort</span>( <span class="variable">$a</span> ); </div>
+                            <pre class="" dir="ltr"><b>array</b> <i>(size=4)</i>
+                       5 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'abricot'</font> <i>(length=7)</i>
+                       0 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'blue'</font> <i>(length=4)</i>
+                       3 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'green'</font> <i>(length=5)</i>
+                       2 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'orange'</font> <i>(length=6)</i>
+                     </pre>
+
+                            <h3>Trier les clés d'un array</h3><br> La fonction <strong>ksort</strong> permet de trier les clés tout en gardant l'association avec les valeurs
+                            <div class="code"><span class="function_name">ksort</span>( <span class="variable">$a</span> ); </div>
+
+                            <pre class="" dir="ltr"><b>array</b> <i>(size=4)</i>
+                       0 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'blue'</font> <i>(length=4)</i>
+                       2 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'orange'</font> <i>(length=6)</i>
+                       3 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'green'</font> <i>(length=5)</i>
+                       5 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'abricot'</font> <i>(length=7)</i>
+                     </pre>
+
+                            <h3>Tri descendant</h3><br> Tous les tris que nous avons étudié plus haut sont des tris ascendants. Pour avoir des tris descendants, utilisez simplement la fonction "<strong>array_reverse</strong>" qui inverse les données.
+
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">sort</span>( <span class="variable">$a</span> );</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="variable">$a</span> = <span class="function_name">array_reverse</span>(<span class="variable">$a</span>);</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <pre class="" dir="ltr"><b>array</b> <i>(size=4)</i>
+                       0 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'orange'</font> <i>(length=6)</i>
+                       1 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'green'</font> <i>(length=5)</i>
+                       2 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'blue'</font> <i>(length=4)</i>
+                       3 <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'abricot'</font> <i>(length=7)</i>
+                     </pre>
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br><br><br>
+        <div class="row" id="loop">
+            <div class="col5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2>Loop / Boucle</h2><br>
+                        <p class="card-text">
+                            Les boucles en programmation c'est exécuter des instructions tant qu'il n'y a pas le changement attendu.
+                            <br /><br /> Si je veux par exemple supprimer les 10 premiers index d'un array, en français je dirais "<strong>supprimer item tant que l'index 
+                            est inférieur à 10</strong>"
+                            <br /><br /> Cela se traduirait par :
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="variable">$index</span> = 0;</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">while</span>( <span class="variable">$index</span> &lt;<span class="balise"></span> 10 ){</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:40px;"><span class="function">unset</span>( <span class="variable">$my_array</span>[<span class="variable">$index</span>] );</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:40px;"> <span class="variable">$index</span> = <span class="variable">$index</span> + 1;</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;">}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Pour comprendre ce script il faut le lire comme l'interpréterait une machine. La première ligne initialise la variable <strong>$index</strong> à 0. Lorsque la boucle while est exécutée, l'index qui a pour valeur <strong>0</strong>                            est accepté puisque inférieur à 10, comme il est demandé. Répondant vrai ( TRUE ) à cette condition nous pouvons entrer dans la boucle. La supression de l'item $my_array[0] s'effectue, puis on incrémente la variable $index
+                            de 1. La variable <strong>index</strong> a donc la valeur 1, qui est toujours inférieure à la valeur 10 donc nous sommes toujours dans la boucle, la suppression de l'index $my_array[1] s'effectue, etc. La boucle s'arretera
+                            lorsque la valeur de la variable $index sera à 9.
+                            <h2>La boucle FOR</h2>
+                            La boucle <strong>FOR</strong> est l'une des plus complexes en <a class="link" title="PHP" href="/page-apprendre-php"><strong>PHP</strong></a>. Sa syntaxe est la suivante:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">for</span>(exp1; exp2; exp3)</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">commandes</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <table class="table table-bordered table-condensed table-list">
+                                <tr>
+                                    <th>exp1</th>
+                                    <td>La première expression est exécutée quoi qu'il arrive une première fois</td>
+                                </tr>
+                                <tr>
+                                    <th>exp2</th>
+                                    <td>A chaque itération exp2 est évaluée, si elle vaut TRUE la boucle continue et l'instruction est exécutée</td>
+                                </tr>
+                                <tr>
+                                    <th>exp3</th>
+                                    <td>À la fin de chaque itération, l'expression exp3 est exécutée</td>
+                                </tr>
+                            </table>
+                            Exemple:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">for</span>( <span class="variable">$i</span> = 0 ; <span class="variable">$i</span> &lt;<span class="balise"></span> 10 ; <span class="variable">$i</span>++ ){</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">unset</span>( <span class="variable">$my_array</span>[<span class="variable">$i</span>] );</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Exemple 2:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">for</span>(<span class="variable">$i</span> = 1, <span class="variable">$j</span> = 0; <span class="variable">$i</span> &lt;= 10; <span class="variable">$j</span> += <span class="variable">$i</span>,
+                                            print <span class="variable">$i</span>, <span class="variable">$i</span>++);</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div>
+        <br><br><br>
+        <div class="row" id="cond">
+            <div class="col5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2>Conditions</h2><br>
+                        <p class="card-text">
+                            Une condition peut se traduire à exécuter une instruction SI telle chose remplit telle condition.
+                            <br /><br />
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="variable">$name</span> = "olivier";</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">if</span>( <span class="variable">$name</span> == "olivier" ){</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">echo</span> "YES !";</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Dans l'exemple si dessus, $name est égal à <strong>olivier</strong> donc la condition est remplie le script exécutera l'instruction <strong>echo</strong>
+                            <h3>TRUE / FALSE</h3><br> Pour que la condition soit rempli, la fonction <strong>IF</strong> execute les instructions à condition qu'on lui donne une valeur qui vaut TRUE ( ou 1 ).
+                            <br /><br /> Exemple de cas true / false:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="variable">$name</span> = "olivier";</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="variable">$name2</span> = "batman"; </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">if</span>( 1 == 1 ) <span class="code_commentaire">// Retourne true</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">if</span>( 1 == 2 ) <span class="code_commentaire">// Retourne false</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">if</span>( <span class="variable">$name</span> == "olivier" ) <span class="code_commentaire">// Retourne true</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">if</span>( "olivier" == <span class="variable">$name</span> ) <span class="code_commentaire">// Retourne true</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">if</span>( <span class="variable">$name</span> == <span class="variable">$name2</span> ) <span class="code_commentaire">// Retourne false</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>OU</h3><br> Il existe une synatxe pour savoir si une variable est égal à une valeur OU à une autre.
+                            <br /> Exemple:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">if</span>( <span class="variable">$a</span> == 1 || <span class="variable">$a</span> == 2 ){</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:40px;"><span class="code_commentaire">// votre instruction</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Si <strong>$a</strong> est égéal à 1 <strong>OU</strong> 2, alors la condition est vérifiée.
+                            <h3>ET</h3><br> Il existe une synatxe pour savoir si une variable est égal à une valeur ET à une autre.
+                            <br /> Exemple:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">if</span>( <span class="variable">$a</span> &lt;<span class="balise"></span> 10 &amp;&amp; <span class="variable">$a</span> &gt; 1 ){</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:40px;"><span class="code_commentaire">// votre instruction</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Si <strong>$a</strong> est inférieure à 10 <strong>ET</strong> supérieure à 1, alors la condition est vérifiée.
+                            <h3>IF ,ELSE IF, ELSE</h3><br> Il est possible de combiner plusieurs vérifications de conditions:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">if</span>( <span class="variable">$a</span> == 1 ){</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:40px;"><span class="code_commentaire">// votre instruction</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;">}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">else <span class="function_name">if</span>( <span class="variable">$a</span> &gt; 2 &amp;&amp; <span class="variable">$a</span> &lt;<span class="balise"></span> 500 )</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:40px;"><span class="code_commentaire">// votre instruction</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">else</span>{</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:40px;"><span class="code_commentaire">// votre instruction</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">}</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Si $a est égal à 1 alors les autres lignes seront ignorées. Sinon tant que les conditions ne sont pas respectée le script cherchera une porte de sortie.
+                            <h3>Autre syntaxe</h3><br> Vous pouvez utiliser la syntaxe suivante pour ne pas à avoir à gérer les accolades:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">if</span>( <span class="variable">$a</span> &gt; 1 )<span class="function_name">:</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="code_commentaire">// votre instruction</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">endif;</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Ou celle-ci:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">if</span>( <span class="variable">$a</span> &gt; 1 )<span class="function_name">:</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="code_commentaire">// votre instruction</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">elseif</span>( <span class="variable">$a</span> ==2 )<span class="function_name">:</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="code_commentaire">// votre instruction</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;">else:</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="code_commentaire">// votre instruction</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">endif;</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            A noter que le else est obligatoire dans ce genre de syntaxe, sinon une erreur d'interprétation sera affichée.
+
+                    </div>
+                </div>
+            </div> <br>
+        </div>
+        <br><br><br>
+        <div class="row" id="get">
+            <div class="col5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2>GET et POST</h2><br>
+                        <p class="card-text">
+                            Un site web ne serait pas dynamique si l'utilisateur et le serveur ne pouvaient communiquer. Pour passer des informations au serveur on passe par un formulaire. Dans ce formulaire on y implémente des inputs. Pour apprendre à construire un formulaire,
+                            visitez la page <a class="link" title="HTML" href="/page-apprendre-html"><strong>HTML</strong></a> / Les formulaires.
+                            <br /><br /> Un formulaire permet de donner des valeurs à des cases nommées pour que le serveur puisse associer une valeur à un nom. Exemple d'un input avec un nom "USER_NAME", il saura que la valeur de cet input sera le nom
+                            de l'utilisateur.
+                            <br />
+                            <h3>Formulaire POST</h3><br> Exemple de formulaire:
+
+                            <div class="code" style="width:100% !important;">
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;<span class="balise">form</span> <span class="attribute">method</span>="<span class="attribute_value">POST</span>" <span class="attribute">action</span>="<span class="attribute_value">/page-html-formulaire</span>"&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:20px;">Nom &lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">name</span>="<span class="attribute_value">nom</span>" /&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:20px;">Pr&eacute;nom &lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">name</span>="<span class="attribute_value">prenom</span>"
+                                            /&gt;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:20px;">&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">submit</span>" <span class="attribute">value</span>="<span class="attribute_value">Valider</span>" /&gt;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;/<span class="balise">form</span>&gt;</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Résultat:
+                            <div class="resultat">
+                                Nom &nbsp; &nbsp; &nbsp;<input type="text" name="nom" /> <br><br /> Prénom <input type="text" name="prenom" /> <br />
+                                <br> <input type="button" value="Valider" />
+                            </div>
+                            Dans cet exemple lorsque l'on clique sur le bouton "valider", les données du formulaire sont envoyées au serveur. Nous avons indiqué dans les propriétés du formulaire que la méthode d'envoi était "POST". C'est donc dans la variable superglobale $_POST
+                            que nous pourrons récupérer les informations du formulaire coté serveur.
+                            <br /><br /> Pour voir le contenu du formulaire qui a été envoyé vous pouvez explorer la variable $_POST comme ceci:
+
+                            <div class="code" style="width:100% !important;">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">var_dump</span>( <span class="variable">$_POST</span> );</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Vous pouvez récupérer directement la valeur d'un input attendu :
+                            <div class="code" style="width:100% !important;">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">echo</span> <span class="variable">$_POST</span>["prenom"];</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h2>Formulaire GET</h2>
+                            Exemple de formulaire:
+                            <div class="code" style="width:100% !important;">
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;<span class="balise">form</span> <span class="attribute">method</span>="<span class="attribute_value">GET</span>" <span class="attribute">action</span>="<span class="attribute_value">/page-html-formulaire</span>"&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:20px;">Nom &lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">name</span>="<span class="attribute_value">nom</span>" /&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:20px;">Pr&eacute;nom &lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">text</span>" <span class="attribute">name</span>="<span class="attribute_value">prenom</span>"
+                                            /&gt;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:20px;">&lt;<span class="balise">input</span> <span class="attribute">type</span>="<span class="attribute_value">submit</span>" <span class="attribute">value</span>="<span class="attribute_value">Valider</span>" /&gt;
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td style="padding-left:0px;">&lt;/<span class="balise">form</span>&gt;</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Résultat:
+                            <div class="resultat">
+                                Nom &nbsp; &nbsp; &nbsp; <input type="text" name="nom" /> <br /> <br>Prénom <input type="text" name="prenom" /> <br />
+                                <br> <input type="button" value="Valider" />
+                            </div>
+                            Pour voir le contenu du formulaire qui a été envoyé vous pouvez explorer la variable $_GET comme ceci:
+                            <div class="code" style="width:100% !important;">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">var_dump</span>( <span class="variable">$_GET</span> );</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Vous pouvez récupérer directement la valeur d'un input attendu :
+                            <div class="code" style="width:100% !important;">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">echo</span> <span class="variable">$_GET</span>["prenom"];</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h2>GET, envoyer des informations via l'url</h2>
+                            Il est possible en <a class="link" title="PHP" href="/page-apprendre-php"><strong>PHP</strong></a> d'envoyer des informations via l'url.
+                            <br /><br /> Exemple:
+                            <br /><br /> http://www.creersonsiteweb.net?nom=olivier
+                            <br /><br /> Pour récupérer la valeur de la variable "nom" :
+                            <div class="code" style="width:100% !important;">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">echo</span> <span class="variable">$_GET</span>["nom"];</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Il est possible de passer plusieurs variables:
+                            <br /><br /> http://www.creersonsiteweb.net?nom=olivier&lieu=Strasbourg
+                            <div class="code" style="width:100% !important;">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">echo</span> <span class="variable">$_GET</span>["nom"];</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">echo</span> <span class="variable">$_GET</span>["lieu"];</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div>
+        <br><br><br>
+        <div class="row" id="cook">
+            <div class="col5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2>Cookies</h2><br>
+                        <p class="card-text">
+                            Un cookie est un fichier texte d'une taille limitée ( 65ko ) qu'on enregistre sur le disque dur du visiteur. Les cookies permettent de garder en mémoire des informations sur l'utilisateur pour les récupérer lors d'une prochaine visite ( ou d'un changement
+                            de page ).
+                            <br /><br /> Les cookies font souvent peur aux utilisateurs, alors que ce ne sont que de simples fichiers texte qui retiennent des informations sans danger, comme votre nom ou les pages que vous avez visités.
+                            <h2>Ecrire un cookie</h2>
+                            Syntaxe:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">setcookie</span>( nom du cookie, valeur, expire );</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Le premier paramètre est donc le nom du cookie. Vous pouvez lui donner le nom que vous voulez. Puis une valeur en deuxième paramètre et sa date d'expiration en format timestamp en troisième paramètre.
+                            <br /><br /> si vous voulez que votre cookie soit valable 1 semaine: <br />
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="variable">$expire</span> = <span class="function_name">time</span>() + 60 * 60 * 24 * 7;</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="function_name">setcookie</span>( "nom", "olivier", <span class="variable">$expire</span> );</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            La valeur expire correspond à (60 sec * 60 min * 24 heures * 7 jours ).
+                            <h2>Lire un cookie</h2>
+                            Pour lire le cookie que vous avez enregistré:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">echo</span> <span class="variable">$_COOKIE</span>["nom"];</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h2>Voir les cookies d'un site</h2>
+                            Si vous vérifiez la présence de cookies dans votre navigateur, prenons l'exemple de Google Chrome. Appuyez sur la touche F12 de votre clavier. Une petite fenêtre s'ouvrira en bas de page. Choisissez l'onglet "Resources" puis cliquez sur Cookies. Vous
+                            devriez voir les cookies du site actif.
+                            <br /><br /> Exemple:
+                            <img alt="cookies php" title="cookies php" class="img_center img-responsive" src="/images/cookies.png" />
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br><br><br>
+        <div class="row" id="sess">
+            <div class="col5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2>Sessions</h2><br>
+                        <p class="card-text">
+                            Les sessions, tout comme les cookies, permettent de garder des informations sur le visiteur. A la différence que les informations ne sont pas stockées sur la machine de l'utilisateur mais sur le serveur. Les sessions sont souvent utilisées pour stocker
+                            des informations après que l'utilisateur se soit identifié. Cela permet notamment de ne plus chercher l'information.
+                            <br /><br /> Par exemple si on a besoin de calculer une information, on pourra la stocker dans une varaible <strong>session</strong> pour éviter de la reclaculer à chaque chargement de page. La force de la <strong>session</strong>                            est de ne pas perdre une information alors que l'utilisateur a changé de page.
+                            <h2>Enregistrement d'une session</h2>
+                            <div class="code" style="width:100% !important;">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="variable">$_SESSION</span>["user_id"] = "15";</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h2>Lire une session</h2>
+                            <div class="code" style="width:100% !important;">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">echo</span> <span class="variable">$_SESSION</span>["user_id"];</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div>
+        <br><br><br>
+        <div class="row" id="vers">
+            <div class="col5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2>Variables serveur</h2>
+                        <p class="card-text">
+                            La variable <i>$_SERVER</i> est un tableau contenant des informations créees par le serveur web. On peut y trouver l'adresse du script exécutée, l'adresse IP du client et du serveur, etc.
+                            <br />
+                            <br /> Vous pouvez consulter les données de votre serveur en indiquant le code suivant:
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">var_dump</span>( <span class="variable">$_SERVER</span> );</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Résultat :
+                            <div class="linees">
+                                <pre class="xdebug-var-dump" dir="ltr"><b>array</b> <i>(size=37)</i>
+                          'REDIRECT_SESSION_USE_TRANS_SID' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'0'</font> <i>(length=1)</i>
+                          'REDIRECT_STATUS' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'200'</font> <i>(length=3)</i>
+                          'SESSION_USE_TRANS_SID' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'0'</font> <i>(length=1)</i>
+                          'HTTP_HOST' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'creersonsiteweb.net'</font> <i>(length=11)</i>
+                          'HTTP_CONNECTION' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'keep-alive'</font> <i>(length=10)</i>
+                          'HTTP_CACHE_CONTROL' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'max-age=0'</font> <i>(length=9)</i>
+                          'HTTP_ACCEPT' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'text/html'</font> <i>(length=74)</i>
+                          'HTTP_USER_AGENT' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'</font> <i>(length=108)</i>
+                          'HTTP_REFERER' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'http://creersonsiteweb.net/page-css-selecteur'</font> <i>(length=37)</i>
+                          'HTTP_ACCEPT_ENCODING' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'gzip,deflate,sdch'</font> <i>(length=17)</i>
+                          'HTTP_ACCEPT_LANGUAGE' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'fr-FR,fr;q=0.8,en-US;q=0.6,en;q=0.4'</font> <i>(length=35)</i>
+                          'HTTP_COOKIE' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'PHPSESSID=phpsessidbidon001010001'</font> <i>(length=178)</i>
+                          'SERVER_SIGNATURE' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">''</font> <i>(length=0)</i>
+                          'SERVER_SOFTWARE' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'Apache/2.2.21 PHP/5.4'</font> <i>(length=32)</i>
+                          'SERVER_NAME' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'creersonsiteweb.net'</font> <i>(length=11)</i>
+                          'SERVER_ADDR' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'200.200.200.200'</font> <i>(length=9)</i>
+                          'SERVER_PORT' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'80'</font> <i>(length=2)</i>
+                          'REMOTE_ADDR' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'69.69.69.69'</font> <i>(length=9)</i>
+                          'DOCUMENT_ROOT' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'/home/olivier/www/cssw'</font> <i>(length=17)</i>
+                          'SERVER_ADMIN' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e984868784888085a98d86848880878c8b808d8687c7878c9d">[email&#160;protected]</a>'</font> <i>(length=15)</i>
+                          'SCRIPT_FILENAME' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'/home/olivier/www/cssw/root.php'</font> <i>(length=27)</i>
+                          'REMOTE_PORT' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'4444'</font> <i>(length=5)</i>
+                          'REDIRECT_QUERY_STRING' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'iduser=999'</font> <i>(length=37)</i>
+                          'REDIRECT_URL' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'/page-php-variable-server-superglobale'</font> <i>(length=38)</i>
+                          'GATEWAY_INTERFACE' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'CGI/1.1'</font> <i>(length=7)</i>
+                          'SERVER_PROTOCOL' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'HTTP/1.1'</font> <i>(length=8)</i>
+                          'REQUEST_METHOD' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'GET'</font> <i>(length=3)</i>
+                          'QUERY_STRING' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'page=php-variable-server-superglobale'</font> <i>(length=37)</i>
+                          'REQUEST_URI' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'/page-php-variable-server-superglobale'</font> <i>(length=38)</i>
+                          'SCRIPT_NAME' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'/root.php'</font> <i>(length=10)</i>
+                          'PHP_SELF' <font color="#888a85">=&gt;</font> <small>string</small> <font color="#cc0000">'/root.php'</font> <i>(length=10)</i>
+                          'REQUEST_TIME' <font color="#888a85">=&gt;</font> <small>int</small> <font color="#4e9a06">1385486067</font>
+                        </pre></div>
+                            <br /><br /> Liste des index les plus utiles:
+                            <div class="table-resposive" style="margin:10px auto;max-width:400px;">
+                                <table class="table table-condensed table-bordered table-list">
+                                    <tr>
+                                        <th>SERVER_ADDR</th>
+                                        <td>Adresse IP du script courant</td>
+                                    </tr>
+                                    <tr>
+                                        <th>SERVER_NAME</th>
+                                        <td>Le nom du serveur web</td>
+                                    </tr>
+                                    <tr>
+                                        <th>DOCUMENT_ROOT</th>
+                                        <td>La racine sous laquelle le script courant est exécuté, comme défini dans la configuration du serveur</td>
+                                    </tr>
+                                    <tr>
+                                        <th>HTTP_REFERER</th>
+                                        <td>La page d'où vient l'utilisateur</td>
+                                    </tr>
+                                    <tr>
+                                        <th>HTTP_USER_AGENT</th>
+                                        <td>Décrit le navigateur utilisé par l'utilisateur</td>
+                                    </tr>
+                                    <tr>
+                                        <th>REMOTE_ADDR</th>
+                                        <td>Adresse IP de l'utilisateur</td>
+                                    </tr>
+                                    <tr>
+                                        <th>REMOTE_HOST</th>
+                                        <td>Adresse IP du serveur</td>
+                                    </tr>
+                                    <tr>
+                                        <th>REMOTE_PORT</th>
+                                        <td>Port utilisé par l'utilisateur</td>
+                                    </tr>
+                                    <tr>
+                                        <th>SCRIPT_FILENAME</th>
+                                        <td>Le chemin complet du script courant</td>
+                                    </tr>
+                                    <tr>
+                                        <th>SERVER_PORT</th>
+                                        <td>Port utilisé par le serveur web</td>
+                                    </tr>
+                                    <tr>
+                                        <th>REQUEST_URI</th>
+                                        <td>L'URI fournit au serveur</td>
+                                    </tr>
+                                </table>
+                            </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br><br><br>
+        <div class="row" id="date">
+            <div class="col5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h1>Dates</h1><br>
+                        <p class="card-text">
+                            <h2>Timestamp</h2>
+                            Le timestamp ( horodatage ) permet d'associer une date à un évènement. En informatique on utilise la date 1er janvier 1970 à 00h00. Pour créer une date on calcule donc le nombre de seconde écoulées depuis le 1er janvier.
+                            <br /> <br /> Exemple:
+                            <div class="code">1386252933 = 05/12/2013 à 15h15</div>
+                            <h2>Timestamp en PHP</h2>
+                            Pour créer un timestamp en <a class="link" title="PHP" href="/page-apprendre-php"><strong>PHP</strong></a> sur l'instant on utilise la fonction time() :
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">echo</span> <span class="function_name">time</span>(); <span class="code_commentaire">// 1386252933</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h2>mktime PHP</h2>
+                            Pour créer un timestamp autre que l'instant présent on peut utiliser la fonction <strong>mktime</strong>.
+                            <br /><br /> La syntaxe de cette fontion est la suivante :
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:20px;"><span class="function">echo</span> <span class="function_name">mktime</span>( &lt;<span class="balise">heure</span>&gt;, &lt;<span class="balise">minute</span>&gt;, &lt;<span class="balise">seconde</span>&gt;, &lt;
+                                            <span class="balise">mois</span>&gt;, &lt;<span class="balise">jour</span>&gt;, &lt;<span class="balise">annee</span>&gt; ); <span class="code_commentaire">// 1386252933</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Si une valeur de droite est manquante, elle sera remplacée par la valeur du temps actuel.
+                            <h2>La fonction date</h2>
+                            La fonction date permet de convertir un timestamp en éléments visuels pour l'utilisateur. On peut par exemple y extraire le jour, le mois, l'année, etc.
+                            <br /><br /> Les valeurs de la fonction date :
+                            <div class="table-responsive" style="margin:20px auto;max-width:500px;">
+                                <table class="table table-bordered table-list table-condensed">
+                                    <tr>
+                                        <th>Format</th>
+                                        <th>Description</th>
+                                        <th>Exemple</th>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;">d</td>
+                                        <td>Jour du mois avec zéro initiaux</td>
+                                        <td>01 à 31</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;">j</td>
+                                        <td>Jour du mois sans zéro initiaux</td>
+                                        <td>1 à 31</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;">w</td>
+                                        <td>Jour de la semaine</td>
+                                        <td>0 (dimanche) à 6 ( samedi )</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;">z</td>
+                                        <td>Jour de l'année</td>
+                                        <td>0 à 365</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;">W</td>
+                                        <td>N° de la semaine</td>
+                                        <td>0 à 53</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;">m</td>
+                                        <td>Mois avec zéros initiaux</td>
+                                        <td>01 à 12</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;">n</td>
+                                        <td>Mois sans zéros initiaux</td>
+                                        <td>1 à 12</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;">Y</td>
+                                        <td>Année sur 4 chiffres</td>
+                                        <td>2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;">Y</td>
+                                        <td>Année sur 2 chiffres</td>
+                                        <td>13</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;">H</td>
+                                        <td>Heure avec les zéros initiaux</td>
+                                        <td>00 à 23</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;">G</td>
+                                        <td>Heure sans les zéros initiaux</td>
+                                        <td>0 à 23</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;">i</td>
+                                        <td>Minutes avec les zéros initiaux</td>
+                                        <td>00 à 59</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;">s</td>
+                                        <td>Secondes avec les zéros initiaux</td>
+                                        <td>00 à 59</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;">L</td>
+                                        <td>Année bissextile?</td>
+                                        <td>1 : oui , 0 : non</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center;">I</td>
+                                        <td>L'heure d'été est active?</td>
+                                        <td>1 : oui , 0 : non</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Vous pouvez maintenant afficher une date dans le format que vous voulez :
+                            <br /><br /> Exemple :
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:40px;"><span class="function">echo</span> <span class="function_name">date</span>("Y-m-d H:i:s"); <span class="code_commentaire">// 2013-12-05 20:15:15</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            Et mettre le timestamp que vous désirez :
+                            <div class="code">
+                                <table>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">&lt;?php</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:40px;"><span class="function">echo</span> <span class="function_name">date</span>("Y-m-d H:i:s", 1386252933); <span class="code_commentaire">// 2013-12-05 15:15:00</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left:0px;"><span class="balise_php">?&gt;</span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                    </div>
+                </div>
+            </div> <br>
+
+        </div>
+    </div>
+    <br>
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; PHP Appreandre - 2020
+                <br> <small>Designed by Vinoth Kumar</small></p>
+        </div>
+    </footer>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
